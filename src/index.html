@@ -5,30 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./tailwind.css" rel="stylesheet" />
-    <title>Hello world</title>
+    <title>Responsive grid layout</title>
   </head>
 
   <body class="grid min-h-screen place-items-center">
     <!-- Responsive Grid Layout -->
-    <div class="grid max-w-5xl gap-4 p-4 xs:grid-cols-2">
-      <h1 class="text-4xl font-extrabold xs:col-span-2 xs:grid xs:grid-cols-2">
-        <span class="bg-yellow-500"
-          >Prawdziwe historie Lorem ipsum consectetur adipisicing</span
-        >
+    <main class="grid max-w-5xl gap-4 p-4 xs:grid-cols-2 md:grid-cols-4">
+      <h1
+        class="text-4xl font-extrabold xs:col-span-2 xs:grid xs:grid-cols-2 xs:gap-4 md:col-span-3 md:text-5xl md:grid-cols-3"
+      >
+        <span class="md:col-span-2">Grid layout with Tailwind CSS</span>
       </h1>
-      <p>
+      <p class="xs:col-start-2 xs:row-start-2 xs:self-center md:col-start-1 md:col-span-2 md:pr-12 md:text-lg">
         Zapraszamy do lektury historii klientów, partnerów i przyjaciół, z
         którymi mamy przyjemność wędrować drogą rozwoju i przedsiębiorczości.
       </p>
-      <div class="h-16 bg-blue-500"></div>
-      <div class="h-16 bg-blue-500"></div>
-      <div class="h-16 bg-pink-500"></div>
-      <div class="h-16 bg-blue-500"></div>
-      <div class="h-16 bg-pink-500"></div>
-      <div class="h-16 bg-blue-500"></div>
-      <div class="h-16 bg-blue-500"></div>
-      <div class="h-16 bg-pink-500"></div>
-      <p>“Jesteśmy złączeni dzięki historiom” - Arystoteles, 384-322 p.n.e.</p>
-    </div>
+      <div class="xs:custom-square h-16 bg-blue-500 xs:h-auto">1</div>
+      <div class="xs:custom-square h-16 bg-blue-500 xs:h-auto">2</div>
+      <div class="xs:custom-square h-16 bg-pink-500 xs:h-auto">3</div>
+      <div class="xs:custom-square h-16 bg-blue-500 xs:h-auto md:col-start-2">4</div>
+      <div class="xs:custom-square h-16 bg-pink-500 xs:h-auto">5</div>
+      <div class="xs:custom-square h-16 bg-blue-500 xs:h-auto">6</div>
+      <div class="xs:custom-square h-16 bg-blue-500 xs:h-auto">7</div>
+      <div class="xs:custom-square h-16 bg-pink-500 xs:h-auto">8</div>
+      <p class="self-center md:text-lg md:col-span-2 md:text-center md:text-4">
+        “Jesteśmy złączeni dzięki historiom” - Arystoteles, 384-322 p.n.e.
+      </p>
+    </main>
   </body>
 </html>
